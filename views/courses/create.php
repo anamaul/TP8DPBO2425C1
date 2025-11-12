@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Create Course</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.php?controller=course&action=index">Courses</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?controller=lecturer&action=index">Lecturers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?controller=course&action=index">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.php?controller=course&action=create">Add New</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="col-lg-6 m-auto">
+    <form method="post" action="index.php?controller=course&action=store">
+      <br><br>
+      <div class="card">
+        <div class="card-header bg-primary">
+          <h1 class="text-white text-center">Create Course</h1>
+        </div>
+
+        <div class="card-body">
+          <div class="mb-3">
+            <label class="form-label">CODE:</label>
+            <input type="text" name="code" class="form-control" required placeholder="e.g., CS101">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">NAME:</label>
+            <input type="text" name="name" class="form-control" required
+              placeholder="e.g., Introduction to Programming">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">SKS:</label>
+            <input type="number" name="sks" class="form-control" required min="1" max="6" placeholder="e.g., 3">
+          </div>
+
+          <div class="d-grid gap-2">
+            <button class="btn btn-success" type="submit" name="submit">Submit</button>
+            <a class="btn btn-info" href="index.php?controller=course&action=index">Cancel</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
