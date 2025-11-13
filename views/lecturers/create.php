@@ -29,7 +29,7 @@
   </nav>
 
   <div class="col-lg-6 m-auto">
-    <form method="post" action="index.php?action=store">
+    <form method="post" action="index.php?controller=lecturer&action=store">
       <br><br>
       <div class="card">
         <div class="card-header bg-primary">
