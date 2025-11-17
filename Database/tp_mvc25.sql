@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2025 at 08:58 AM
+-- Generation Time: Nov 17, 2025 at 11:23 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -71,8 +71,7 @@ INSERT INTO `lecturers` (`id`, `name`, `nidn`, `phone`, `join_date`) VALUES
 (2, 'Prof. Siti Rahmawati', '0987654321', '082345678901', '2010-02-25'),
 (3, 'Drs. Bambang Prasetyo', '1122334455', '083456789012', '2018-11-10'),
 (4, 'Dr. Lestari Dewi', '5566778899', '081223344556', '2017-03-05'),
-(5, 'M. Rizki Hidayat, M.Kom', '6677889900', '085678901234', '2020-09-15'),
-(6, 'Maulana', '2408647', '0882', '2025-11-17');
+(5, 'M. Rizki Hidayat, M.Kom', '6677889900', '085678901234', '2020-09-15');
 
 -- --------------------------------------------------------
 
@@ -133,13 +132,13 @@ ALTER TABLE `lecturer_courses`
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `lecturers`
 --
 ALTER TABLE `lecturers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
