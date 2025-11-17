@@ -11,7 +11,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.php?action=index">Lecturers</a>
+      <a class="navbar-brand" href="index.php?controller=lecturer&action=index">Lecturers</a>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -28,7 +28,8 @@
 
   <div class="container my-4">
     <div class="col-1 my-3">
-      <a type="button" class="btn btn-primary nav-link active" href="index.php?action=create">Add New</a>
+      <a type="button" class="btn btn-primary nav-link active" href="index.php?controller=lecturer&action=create">Add
+        New</a>
     </div>
 
     <table class="table table-striped table-hover">
@@ -54,8 +55,8 @@
               <td>{$row['phone']}</td>
               <td>{$row['join_date']}</td>
               <td>
-                <a class='btn btn-success btn-sm' href='index.php?action=edit&id={$row['id']}'>Edit</a>
-                <a class='btn btn-danger btn-sm' href='index.php?action=delete&id={$row['id']}'>Delete</a>
+                <a class='btn btn-success btn-sm' href='index.php?controller=lecturer&action=edit&id={$row['id']}'>Edit</a>
+                <a class='btn btn-danger btn-sm' href='index.php?controller=lecturer&action=delete&id={$row['id']}'>Delete</a>
               </td>
             </tr>
             ";

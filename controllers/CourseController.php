@@ -32,7 +32,7 @@ class CourseController
       $this->course->sks = $_POST['sks'];
 
       if ($this->course->create()) {
-        header("Location: /tp_mvc25/public/index.php?controller=course&action=index");
+        header("Location: index.php?controller=course&action=index");
         exit();
       } else {
         echo "Failed to create course.";
@@ -50,7 +50,7 @@ class CourseController
       if ($course) {
         require_once __DIR__ . '/../views/courses/edit.php';
       } else {
-        header("Location: /tp_mvc25/public/index.php?controller=course&action=index");
+        header("Location: index.php?controller=course&action=index");
         exit();
       }
     }
@@ -66,7 +66,7 @@ class CourseController
       $this->course->sks = $_POST['sks'];
 
       if ($this->course->update()) {
-        header("Location: /tp_mvc25/public/index.php?controller=course&action=index");
+        header("Location: index.php?controller=course&action=index");
         exit();
       } else {
         echo "Failed to update course.";
@@ -84,7 +84,7 @@ class CourseController
       if ($course) {
         require_once __DIR__ . '/../views/courses/delete.php';
       } else {
-        header("Location: /tp_mvc25/public/index.php?controller=course&action=index");
+        header("Location: index.php?controller=course&action=index");
         exit();
       }
     }
@@ -96,7 +96,7 @@ class CourseController
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id'])) {
       $id = $_POST['id'];
       if ($this->course->delete($id)) {
-        header("Location: /tp_mvc25/public/index.php?controller=course&action=index");
+        header("Location: index.php?controller=course&action=index");
         exit();
       } else {
         echo "Failed to delete course.";

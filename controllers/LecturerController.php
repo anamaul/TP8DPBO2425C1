@@ -33,7 +33,7 @@ class LecturerController
       $this->lecturer->join_date = $_POST['join_date'];
 
       if ($this->lecturer->create()) {
-        header("Location: /tp_mvc25/public/index.php?action=index");
+        header("Location: index.php?controller=lecturer&action=index");
         exit();
       } else {
         echo "Failed to create lecturer.";
@@ -51,7 +51,7 @@ class LecturerController
       if ($lecturer) {
         require_once __DIR__ . '/../views/lecturers/edit.php';
       } else {
-        header("Location: /tp_mvc25/public/index.php?action=index");
+        header("Location: index.php?controller=lecturer&action=index");
         exit();
       }
     }
@@ -68,7 +68,7 @@ class LecturerController
       $this->lecturer->join_date = $_POST['join_date'];
 
       if ($this->lecturer->update()) {
-        header("Location: /tp_mvc25/public/index.php?action=index");
+        header("Location: index.php?controller=lecturer&action=index");
         exit();
       } else {
         echo "Failed to update lecturer.";
@@ -86,7 +86,7 @@ class LecturerController
       if ($lecturer) {
         require_once __DIR__ . '/../views/lecturers/delete.php';
       } else {
-        header("Location: /tp_mvc25/public/index.php?action=index");
+        header("Location: index.php?controller=lecturer&action=index");
         exit();
       }
     }
@@ -98,7 +98,7 @@ class LecturerController
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id'])) {
       $id = $_POST['id'];
       if ($this->lecturer->delete($id)) {
-        header("Location: /tp_mvc25/public/index.php?action=index");
+        header("Location: index.php?controller=lecturer&action=index");
         exit();
       } else {
         echo "Failed to delete lecturer.";

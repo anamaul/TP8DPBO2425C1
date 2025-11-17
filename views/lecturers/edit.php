@@ -10,7 +10,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.php?action=index">Lecturers</a>
+      <a class="navbar-brand" href="index.php?controller=lecturer&action=index">Lecturers</a>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -28,7 +28,7 @@
   </nav>
 
   <div class="col-lg-6 m-auto">
-    <form method="post" action="index.php?action=update">
+    <form method="post" action="index.php?controller=lecturer&action=update">
       <br><br>
       <div class="card">
         <div class="card-header bg-warning">
@@ -61,7 +61,7 @@
 
           <div class="d-grid gap-2">
             <button class="btn btn-success" type="submit" name="submit">Submit</button>
-            <a class="btn btn-info" href="index.php?action=index">Cancel</a>
+            <a class="btn btn-info" href="index.php?controller=lecturer&action=index">Cancel</a>
           </div>
         </div>
       </div>
