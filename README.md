@@ -146,3 +146,4 @@ Aplikasi ini menggunakan struktur **MVC (Model-View-Controller)** yang ringan:
 
 <h2>🧭 Run Program</h2>
 
+https://github.com/user-attachments/assets/08542a4f-5648-4a3a-87e8-e2c49084f641
