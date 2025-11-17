@@ -18,6 +18,9 @@
             <a class="nav-link" href="index.php?controller=lecturer&action=index">Lecturers</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="index.php?controller=lecturer_courses&action=index">Lecturer Courses</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.php?controller=course&action=index">Courses</a>
           </li>
         </ul>

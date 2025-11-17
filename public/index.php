@@ -5,15 +5,22 @@
 $controllerName = isset($_GET['controller']) ? $_GET['controller'] : 'lecturer';
 $action = isset($_GET['action']) ? $_GET['action'] : 'index';
 
-// Determine which controller to load
+// 2. Tentukan Controller mana yang akan dimuat dan diinstansiasi
 switch ($controllerName) {
   case 'course':
     require_once __DIR__ . '/../controllers/CourseController.php';
     $controller = new CourseController();
     break;
 
+  case 'lecturer_courses':
+    // Tambahkan routing untuk Controller Relasi Many-to-Many
+    require_once __DIR__ . '/../controllers/Lecturer_CoursesController.php';
+    $controller = new Lecturer_CoursesController();
+    break;
+
   case 'lecturer':
   default:
+    // Default Controller (Lecturer)
     require_once __DIR__ . '/../controllers/LecturerController.php';
     $controller = new LecturerController();
     break;
