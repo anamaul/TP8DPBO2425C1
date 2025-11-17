@@ -22,7 +22,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page"
-              href="index.php?controller=lecturer_courses&action=index">Assignments</a>
+              href="index.php?controller=lecturer_courses&action=index">Lecturer Courses</a>
           </li>
         </ul>
       </div>
