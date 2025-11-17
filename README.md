@@ -59,27 +59,47 @@ Aplikasi ini menggunakan struktur **MVC (Model-View-Controller)** yang ringan:
     <tr>
       <td><code>models/Lecturer.php</code></td>
       <td>Model Dosen</td>
-      <td>Berisi fungsi CRUD Dosen (createLecturer, getAllLecturers, updateLecturer, deleteLecturer) dan fungsi relasi.</td>
+      <td>Berisi fungsi **CRUD** (Create, Read, Update, Delete) data Dosen dan *query* database terkait Dosen.</td>
     </tr>
     <tr>
       <td><code>models/Course.php</code></td>
       <td>Model Mata Kuliah</td>
-      <td>Berisi fungsi CRUD Mata Kuliah (createCourse, getAllCourses, updateCourse, deleteCourse) dan fungsi relasi.</td>
+      <td>Berisi fungsi **CRUD** (Create, Read, Update, Delete) data Mata Kuliah dan *query* database terkait Mata Kuliah.</td>
     </tr>
     <tr>
-      <td><code>views/lecturers</code></td>
+      <td><code>models/LecturerCourses.php</code></td>
+      <td>Model Relasi Many-to-Many</td>
+      <td>Berisi fungsi untuk mengelola **relasi** (*assignment*)/penugasan Dosen ke Mata Kuliah (`create`, `getAll`, `delete`). Bertanggung jawab atas tabel *pivot* (`lecturer_courses`).</td>
+    </tr>
+    <tr>
+      <td><code>controllers/LecturerController.php</code></td>
+      <td>Controller Dosen</td>
+      <td>Menerima input Dosen, memanggil `Lecturer.php` (Model), dan memuat *View* Dosen.</td>
+    </tr>
+    <tr>
+      <td><code>controllers/CourseController.php</code></td>
+      <td>Controller Mata Kuliah</td>
+      <td>Menerima input Mata Kuliah, memanggil `Course.php` (Model), dan memuat *View* Mata Kuliah.</td>
+    </tr>
+    <tr>
+      <td><code>controllers/Lecturer_CoursesController.php</code></td>
+      <td>Controller Relasi</td>
+      <td>Menerima input penugasan, memproses data *summary*, memanggil `LecturerCourses.php` (Model), dan memuat *View* Relasi.</td>
+    </tr>
+    <tr>
+      <td><code>views/lecturers/</code></td>
       <td>View Dosen</td>
-      <td>Menampilkan daftar Dosen dan form untuk menambah/mengedit/menghapus Dosen.</td>
+      <td>Berisi *template* UI (HTML/PHP) untuk daftar Dosen dan *form* CRUD Dosen.</td>
     </tr>
     <tr>
-      <td><code>views/courses</code></td>
+      <td><code>views/courses/</code></td>
       <td>View Mata Kuliah</td>
-      <td>Menampilkan daftar Mata Kuliah dan form untuk menambah/mengedit/menghapus Mata Kuliah.</td>
+      <td>Berisi *template* UI (HTML/PHP) untuk daftar Mata Kuliah dan *form* CRUD Mata Kuliah.</td>
     </tr>
     <tr>
-      <td><code>views/lecturer_courses</code></td>
-      <td>View relasi Dosen dengan Mata Kuliah</td>
-      <td>Menampilkan hubungan dosen dengan daftar Mata Kuliah</td>
+      <td><code>views/lecturer_courses/</code></td>
+      <td>View Assignment</td>
+      <td>Berisi *template* UI (HTML/PHP) untuk menampilkan daftar penugasan relasi </td>
     </tr>
   </tbody>
 </table>
@@ -109,7 +129,7 @@ Aplikasi ini menggunakan struktur **MVC (Model-View-Controller)** yang ringan:
   </li>
 </ol>
 <p>
-    > **Catatan Relasi:** Penghapusan Dosen atau Mata Kuliah akan mempengaruhi data di tabel perantara `tp_mvc25_lecturer_courses` sesuai dengan pengaturan *Foreign Key* (disarankan menggunakan **ON DELETE CASCADE** agar data relasi juga terhapus).
+    > **Catatan Relasi:** Penghapusan Dosen atau Mata Kuliah akan mempengaruhi data di tabel perantara `lecturer_courses` sesuai dengan pengaturan *Foreign Key*.
 </p>
 
 <h2>⚙️ Cara Menjalankan</h2>
