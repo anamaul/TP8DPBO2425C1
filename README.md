@@ -140,9 +140,9 @@ Aplikasi ini menggunakan struktur **MVC (Model-View-Controller)** yang ringan:
       <li>Akses melalui browser dengan URL: `http://localhost/tugas_mvc_7/index.php` atau sesuai konfigurasi server Anda.</li>
     </ol>
     
-<h2>🎮 Tampilan GUI Program</h2>
+<h2>🎮 Tampilan Landing Page Program</h2>
 
+<img width="1919" height="1047" alt="image" src="https://github.com/user-attachments/assets/de984661-28df-4241-ac12-8cb470cd9824" />
 
 <h2>🧭 Run Program</h2>
 
-[Link to a video demonstration of the program's CRUD features]
