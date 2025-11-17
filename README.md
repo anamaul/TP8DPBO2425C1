@@ -1,5 +1,5 @@
 <h1>🧾 Janji</h1>
-Saya **[Nama Anda]** dengan NIM **[NIM Anda]** mengerjakan Tugas Praktikum 7
+Saya Muhammad Maulana Adrian dengan NIM 2408647 mengerjakan Tugas Praktikum 8
 dalam mata kuliah Desain Pemrograman Berbasis Objek untuk keberkahanNya maka
 saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin
 
@@ -11,17 +11,19 @@ Proyek ini menerapkan konsep **Object-Oriented Programming (OOP)** dengan memisa
 
 ## 📚 Hubungan Antar Entitas (Relasi Many-to-Many)
 
-Skema database menunjukkan relasi **Many-to-Many** antara `tp_mvc25_lecturers` dan `tp_mvc25_courses`, dihubungkan oleh tabel perantara `tp_mvc25_lecturer_courses`.
+Skema database menunjukkan relasi **Many-to-Many** antara `lecturers` dan `courses`, dihubungkan oleh tabel perantara `lecturer_courses`.
 * Satu **Dosen** dapat mengajar banyak **Mata Kuliah**.
 * Satu **Mata Kuliah** dapat diajar oleh banyak **Dosen**.
 
 <h2>🖼️ Design Database</h2>
 
+<img width="793" height="240" alt="image" src="https://github.com/user-attachments/assets/e1500825-ba00-4c9e-9727-46c68d009403" />
+
 
 > **Keterangan Tabel:**
-> 1.  `tp_mvc25_lecturers`: Menyimpan data Dosen (id, name, nidn, phone, join_date).
-> 2.  `tp_mvc25_courses`: Menyimpan data Mata Kuliah (id, code, name, sks).
-> 3.  `tp_mvc25_lecturer_courses`: Tabel pivot yang menyimpan relasi Dosen dan Mata Kuliah (lecturer_id, course_id).
+> 1.  `lecturers`: Menyimpan data Dosen (id, name, nidn, phone, join_date).
+> 2.  `courses`: Menyimpan data Mata Kuliah (id, code, name, sks).
+> 3.  `lecturer_courses`: Tabel pivot yang menyimpan relasi Dosen dan Mata Kuliah (lecturer_id, course_id).
 
 <h2>🛠️ Persyaratan Sistem</h2>
 
@@ -50,44 +52,34 @@ Aplikasi ini menggunakan struktur **MVC (Model-View-Controller)** yang ringan:
       <td>Titik masuk utama aplikasi, mengatur *routing* halaman berdasarkan parameter <code>?page=...</code> dan menginstansi Class utama.</td>
     </tr>
     <tr>
-      <td><code>config/db.php</code></td>
+      <td><code>config/database.php</code></td>
       <td>Koneksi Database</td>
       <td>Berisi Class **Database** untuk koneksi ke MySQL menggunakan PDO.</td>
     </tr>
     <tr>
-      <td><code>view/header.php</code></td>
-      <td>Header &amp; Navigasi</td>
-      <td>Berisi navigasi utama (Dosen, Mata Kuliah).</td>
-    </tr>
-    <tr>
-      <td><code>view/footer.php</code></td>
-      <td>Footer</td>
-      <td>Berisi informasi *copyright*.</td>
-    </tr>
-    <tr>
-      <td><code>style.css</code></td>
-      <td>Styling</td>
-      <td>Mengatur tampilan CSS dasar.</td>
-    </tr>
-    <tr>
-      <td><code>class/Lecturer.php</code></td>
+      <td><code>models/Lecturer.php</code></td>
       <td>Model Dosen</td>
       <td>Berisi fungsi CRUD Dosen (createLecturer, getAllLecturers, updateLecturer, deleteLecturer) dan fungsi relasi.</td>
     </tr>
     <tr>
-      <td><code>class/Course.php</code></td>
+      <td><code>models/Course.php</code></td>
       <td>Model Mata Kuliah</td>
       <td>Berisi fungsi CRUD Mata Kuliah (createCourse, getAllCourses, updateCourse, deleteCourse) dan fungsi relasi.</td>
     </tr>
     <tr>
-      <td><code>view/lecturers.php</code></td>
+      <td><code>views/lecturers</code></td>
       <td>View Dosen</td>
-      <td>Menampilkan daftar Dosen dan form untuk menambah/mengedit Dosen.</td>
+      <td>Menampilkan daftar Dosen dan form untuk menambah/mengedit/menghapus Dosen.</td>
     </tr>
     <tr>
-      <td><code>view/courses.php</code></td>
+      <td><code>views/courses</code></td>
       <td>View Mata Kuliah</td>
-      <td>Menampilkan daftar Mata Kuliah dan form untuk menambah/mengedit Mata Kuliah.</td>
+      <td>Menampilkan daftar Mata Kuliah dan form untuk menambah/mengedit/menghapus Mata Kuliah.</td>
+    </tr>
+    <tr>
+      <td><code>views/lecturer_courses</code></td>
+      <td>View relasi Dosen dengan Mata Kuliah</td>
+      <td>Menampilkan hubungan dosen dengan daftar Mata Kuliah</td>
     </tr>
   </tbody>
 </table>
